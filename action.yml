@@ -8,7 +8,8 @@ inputs:
     required: true
   numberB:
     description: The second number to provide
-    required: true
+    required: false
+    default: "0"
 
 outputs:
   sum:
