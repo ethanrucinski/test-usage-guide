@@ -1,0 +1,14 @@
+name: Pull request validation
+
+on: pull_request
+
+jobs:
+  pull-request-title-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check pull request title
+        if: (startsWith(github.event.pull_request.title, 'fix:') || startsWith(github.event.pull_request.title, 'feat:') || startsWith(github.event.pull_request.title, 'chore:')) == false
+        run: |
+          echo ${{ github.event.pull_request.title }}
+          echo The title of your pull request did not meet standards - Title must start with "fix:", "feat:", or "chore:"
+          exit 1
