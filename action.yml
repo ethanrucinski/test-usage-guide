@@ -24,4 +24,3 @@ runs:
         SUM=`expr ${{ inputs.numberA }} + ${{ inputs.numberB }}`
         echo "sum=$SUM" >> $GITHUB_OUTPUT
       shell: bash
-
