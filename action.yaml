@@ -1,0 +1,27 @@
+name: Test hinting action
+
+description: An action to test hinting
+
+inputs:
+  numberA:
+    description: The first number to provide
+    required: true
+  numberB:
+    description: The second number to provide
+    required: true
+
+outputs:
+  sum:
+    description: The sum of the inputs
+    value: ${{ steps.add-numbers.outputs.sum }}
+
+runs:
+  using: composite
+  steps:
+    - name: Add numbers
+      id: add-numbers
+      run: |
+        SUM=`expr ${{ inputs.numberA }} + ${{ inputs.numberB }}`
+        echo "sum=$SUM" >> $GITHUB_OUTPUT
+      shell: bash
+
