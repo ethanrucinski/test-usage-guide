@@ -1,4 +1,4 @@
-# Test hinting action
+# Test usage guide
 
 <!-- action-docs-description -->
 ## Description
@@ -6,11 +6,11 @@
 An action to test hinting
 <!-- action-docs-description -->
 
-<!-- action-docs-usage project="ethanrucinski/test-hinting-action" version="v1" -->
+<!-- action-docs-usage project="ethanrucinski/test-usage-guide" version="v1" -->
 ## Usage
 
 ```yaml
-- uses: ethanrucinski/test-hinting-action@v1
+- uses: ethanrucinski/test-usage-guide@v1
   with:
     numberA:
     # The first number to provide
@@ -23,7 +23,7 @@ An action to test hinting
     # Required: false
     # Default: 0
 ```
-<!-- action-docs-usage project="ethanrucinski/test-hinting-action" version="v1" -->
+<!-- action-docs-usage project="ethanrucinski/test-usage-guide" version="v1" -->
 
 <!-- action-docs-inputs -->
 ## Inputs
